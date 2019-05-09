@@ -7,42 +7,225 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A806610D21B4D3FE000E5598 /* Runtime+IvarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806610C21B4D3FE000E5598 /* Runtime+IvarTests.swift */; };
+		A806610F21B4DF9B000E5598 /* Runtime+ProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806610E21B4DF9B000E5598 /* Runtime+ProtocolTests.swift */; };
+		A806611121B4F091000E5598 /* Runtime+PropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806611021B4F091000E5598 /* Runtime+PropertyTests.swift */; };
+		A806611421B4F774000E5598 /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = A806611321B4F774000E5598 /* README.MD */; };
+		A80FBC122179D6B1008415E1 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80FBC112179D6B1008415E1 /* Temp.swift */; };
+		A81D4BFB213D0DFF00530F6A /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4BFA213D0DFF00530F6A /* Method.swift */; };
+		A81D4BFD213D0E0B00530F6A /* Ivar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4BFC213D0E0B00530F6A /* Ivar.swift */; };
+		A81D4BFF213D0E4300530F6A /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4BFE213D0E4300530F6A /* Protocol.swift */; };
+		A81D4C01213D0E5400530F6A /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4C00213D0E5400530F6A /* Property.swift */; };
+		A81D4C04213D0EB100530F6A /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4C03213D0EB100530F6A /* Misc.swift */; };
+		A81D4C06213D1CCF00530F6A /* PropertyAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4C05213D1CCF00530F6A /* PropertyAttribute.swift */; };
+		A859CE0820FF091D005900F1 /* YumeRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A859CDFF20FF091D005900F1 /* YumeRuntime.framework */; };
+		A859CE0F20FF091D005900F1 /* YumeRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = A859CE0120FF091D005900F1 /* YumeRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A859CE1620FF0944005900F1 /* YumeRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855829D20FDD3120033777C /* YumeRuntime.swift */; };
+		A859CE1820FF0944005900F1 /* YumeRuntime+Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = A859CDD420FEDB9C005900F1 /* YumeRuntime+Property.swift */; };
+		A859CE1920FF0944005900F1 /* YumeRuntime+Ivar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A859CDD020FEDB88005900F1 /* YumeRuntime+Ivar.swift */; };
+		A859CE1A20FF0944005900F1 /* YumeRuntime+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A859CDD220FEDB90005900F1 /* YumeRuntime+Protocol.swift */; };
+		A859CE1B20FF0944005900F1 /* Selector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A859CDD820FEDBC9005900F1 /* Selector.swift */; };
+		A859CE1D20FF0944005900F1 /* YumeRuntime+Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A859CDDC20FEDC18005900F1 /* YumeRuntime+Variable.swift */; };
+		A859CE1E20FF0944005900F1 /* YumeRuntime+Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = A859CDDE20FEDC49005900F1 /* YumeRuntime+Other.swift */; };
+		A859CE1F20FF0944005900F1 /* YumeRuntime+Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = A859CDCE20FEDB6A005900F1 /* YumeRuntime+Method.swift */; };
+		A859CE2020FF09AA005900F1 /* RuntimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A859CDF220FEF037005900F1 /* RuntimeTests.swift */; };
+		A859CE2120FF09AD005900F1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A859CDF820FEF133005900F1 /* Person.swift */; };
+		A88481D321AF96D10046F851 /* Misc+Pointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88481D221AF96D10046F851 /* Misc+Pointer.swift */; };
+		A88481D521AFB56C0046F851 /* MethodDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88481D421AFB56C0046F851 /* MethodDescription.swift */; };
+		A88481D721AFB5EB0046F851 /* RawInitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88481D621AFB5EB0046F851 /* RawInitable.swift */; };
+		A88481DB21AFC8540046F851 /* Runtime+MethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88481DA21AFC8540046F851 /* Runtime+MethodTests.swift */; };
+		A88481DD21AFCB260046F851 /* Mirror.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88481DC21AFCB260046F851 /* Mirror.swift */; };
 		A8AA898F20FC6D7400EA28E0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AA898E20FC6D7400EA28E0 /* main.swift */; };
+		A8AA899620FC6D9700EA28E0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AA899520FC6D9700EA28E0 /* Person.swift */; };
+		A8AA899C20FDC31400EA28E0 /* Bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AA899B20FDC31400EA28E0 /* Bind.swift */; };
+		A8DEF22320FF0DE30086783A /* YumeRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A859CDFF20FF091D005900F1 /* YumeRuntime.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A859CE0920FF091D005900F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8AA898320FC6D7400EA28E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A859CDFE20FF091D005900F1;
+			remoteInfo = YumeRuntime;
+		};
+		A8DEF22120FF0DDF0086783A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8AA898320FC6D7400EA28E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A859CDFE20FF091D005900F1;
+			remoteInfo = YumeRuntime;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		A8AA898920FC6D7400EA28E0 /* CopyFiles */ = {
+		A8AA898920FC6D7400EA28E0 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		A8DEF22020FF0CEC0086783A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A806610C21B4D3FE000E5598 /* Runtime+IvarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Runtime+IvarTests.swift"; sourceTree = "<group>"; };
+		A806610E21B4DF9B000E5598 /* Runtime+ProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Runtime+ProtocolTests.swift"; sourceTree = "<group>"; };
+		A806611021B4F091000E5598 /* Runtime+PropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Runtime+PropertyTests.swift"; sourceTree = "<group>"; };
+		A806611321B4F774000E5598 /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
+		A80FBC112179D6B1008415E1 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
+		A81D4BFA213D0DFF00530F6A /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		A81D4BFC213D0E0B00530F6A /* Ivar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ivar.swift; sourceTree = "<group>"; };
+		A81D4BFE213D0E4300530F6A /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		A81D4C00213D0E5400530F6A /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		A81D4C03213D0EB100530F6A /* Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		A81D4C05213D1CCF00530F6A /* PropertyAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyAttribute.swift; sourceTree = "<group>"; };
+		A855829D20FDD3120033777C /* YumeRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YumeRuntime.swift; sourceTree = "<group>"; };
+		A859CDCE20FEDB6A005900F1 /* YumeRuntime+Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YumeRuntime+Method.swift"; sourceTree = "<group>"; };
+		A859CDD020FEDB88005900F1 /* YumeRuntime+Ivar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YumeRuntime+Ivar.swift"; sourceTree = "<group>"; };
+		A859CDD220FEDB90005900F1 /* YumeRuntime+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YumeRuntime+Protocol.swift"; sourceTree = "<group>"; };
+		A859CDD420FEDB9C005900F1 /* YumeRuntime+Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YumeRuntime+Property.swift"; sourceTree = "<group>"; };
+		A859CDD820FEDBC9005900F1 /* Selector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selector.swift; sourceTree = "<group>"; };
+		A859CDDC20FEDC18005900F1 /* YumeRuntime+Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YumeRuntime+Variable.swift"; sourceTree = "<group>"; };
+		A859CDDE20FEDC49005900F1 /* YumeRuntime+Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YumeRuntime+Other.swift"; sourceTree = "<group>"; };
+		A859CDF220FEF037005900F1 /* RuntimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeTests.swift; sourceTree = "<group>"; };
+		A859CDF820FEF133005900F1 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A859CDFF20FF091D005900F1 /* YumeRuntime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YumeRuntime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A859CE0120FF091D005900F1 /* YumeRuntime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YumeRuntime.h; sourceTree = "<group>"; };
+		A859CE0220FF091D005900F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A859CE0720FF091D005900F1 /* YumeRuntimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YumeRuntimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A859CE0E20FF091D005900F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A88481D221AF96D10046F851 /* Misc+Pointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Misc+Pointer.swift"; sourceTree = "<group>"; };
+		A88481D421AFB56C0046F851 /* MethodDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodDescription.swift; sourceTree = "<group>"; };
+		A88481D621AFB5EB0046F851 /* RawInitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawInitable.swift; sourceTree = "<group>"; };
+		A88481DA21AFC8540046F851 /* Runtime+MethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Runtime+MethodTests.swift"; sourceTree = "<group>"; };
+		A88481DC21AFCB260046F851 /* Mirror.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mirror.swift; sourceTree = "<group>"; };
 		A8AA898B20FC6D7400EA28E0 /* RuntimeSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RuntimeSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8AA898E20FC6D7400EA28E0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A8AA899520FC6D9700EA28E0 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A8AA899B20FDC31400EA28E0 /* Bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bind.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A8AA898820FC6D7400EA28E0 /* Frameworks */ = {
+		A859CDFB20FF091D005900F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A859CE0420FF091D005900F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A859CE0820FF091D005900F1 /* YumeRuntime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8AA898820FC6D7400EA28E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8DEF22320FF0DE30086783A /* YumeRuntime.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A806611221B4F75D000E5598 /* TypeEncoding */ = {
+			isa = PBXGroup;
+			children = (
+				A806611321B4F774000E5598 /* README.MD */,
+			);
+			path = TypeEncoding;
+			sourceTree = "<group>";
+		};
+		A81D4BF7213D0D9F00530F6A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A88481D921AFBA350046F851 /* Ex */,
+				A81D4BFA213D0DFF00530F6A /* Method.swift */,
+				A81D4BFC213D0E0B00530F6A /* Ivar.swift */,
+				A81D4BFE213D0E4300530F6A /* Protocol.swift */,
+				A81D4C00213D0E5400530F6A /* Property.swift */,
+				A81D4C05213D1CCF00530F6A /* PropertyAttribute.swift */,
+				A88481D421AFB56C0046F851 /* MethodDescription.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A81D4C02213D0EA800530F6A /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				A81D4C03213D0EB100530F6A /* Misc.swift */,
+				A88481D221AF96D10046F851 /* Misc+Pointer.swift */,
+				A88481D621AFB5EB0046F851 /* RawInitable.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		A859CE0020FF091D005900F1 /* YumeRuntime */ = {
+			isa = PBXGroup;
+			children = (
+				A806611221B4F75D000E5598 /* TypeEncoding */,
+				A81D4C02213D0EA800530F6A /* Misc */,
+				A81D4BF7213D0D9F00530F6A /* Classes */,
+				A855829D20FDD3120033777C /* YumeRuntime.swift */,
+				A859CDCE20FEDB6A005900F1 /* YumeRuntime+Method.swift */,
+				A859CDD020FEDB88005900F1 /* YumeRuntime+Ivar.swift */,
+				A859CDD220FEDB90005900F1 /* YumeRuntime+Protocol.swift */,
+				A859CDD420FEDB9C005900F1 /* YumeRuntime+Property.swift */,
+				A859CDDC20FEDC18005900F1 /* YumeRuntime+Variable.swift */,
+				A859CDDE20FEDC49005900F1 /* YumeRuntime+Other.swift */,
+				A859CE0120FF091D005900F1 /* YumeRuntime.h */,
+				A859CE0220FF091D005900F1 /* Info.plist */,
+			);
+			path = YumeRuntime;
+			sourceTree = "<group>";
+		};
+		A859CE0B20FF091D005900F1 /* YumeRuntimeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A859CDF220FEF037005900F1 /* RuntimeTests.swift */,
+				A88481DA21AFC8540046F851 /* Runtime+MethodTests.swift */,
+				A806610C21B4D3FE000E5598 /* Runtime+IvarTests.swift */,
+				A806610E21B4DF9B000E5598 /* Runtime+ProtocolTests.swift */,
+				A806611021B4F091000E5598 /* Runtime+PropertyTests.swift */,
+				A859CDF820FEF133005900F1 /* Person.swift */,
+				A859CE0E20FF091D005900F1 /* Info.plist */,
+			);
+			path = YumeRuntimeTests;
+			sourceTree = "<group>";
+		};
+		A88481D921AFBA350046F851 /* Ex */ = {
+			isa = PBXGroup;
+			children = (
+				A859CDD820FEDBC9005900F1 /* Selector.swift */,
+			);
+			path = Ex;
+			sourceTree = "<group>";
+		};
 		A8AA898220FC6D7400EA28E0 = {
 			isa = PBXGroup;
 			children = (
 				A8AA898D20FC6D7400EA28E0 /* RuntimeSwift */,
+				A859CE0020FF091D005900F1 /* YumeRuntime */,
+				A859CE0B20FF091D005900F1 /* YumeRuntimeTests */,
 				A8AA898C20FC6D7400EA28E0 /* Products */,
+				A8DEF21620FF0ADE0086783A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				A8AA898B20FC6D7400EA28E0 /* RuntimeSwift */,
+				A859CDFF20FF091D005900F1 /* YumeRuntime.framework */,
+				A859CE0720FF091D005900F1 /* YumeRuntimeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,24 +243,84 @@
 			isa = PBXGroup;
 			children = (
 				A8AA898E20FC6D7400EA28E0 /* main.swift */,
+				A8AA899520FC6D9700EA28E0 /* Person.swift */,
+				A8AA899B20FDC31400EA28E0 /* Bind.swift */,
+				A80FBC112179D6B1008415E1 /* Temp.swift */,
+				A88481DC21AFCB260046F851 /* Mirror.swift */,
 			);
 			path = RuntimeSwift;
 			sourceTree = "<group>";
 		};
+		A8DEF21620FF0ADE0086783A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		A859CDFC20FF091D005900F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A859CE0F20FF091D005900F1 /* YumeRuntime.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		A859CDFE20FF091D005900F1 /* YumeRuntime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A859CE1420FF091D005900F1 /* Build configuration list for PBXNativeTarget "YumeRuntime" */;
+			buildPhases = (
+				A859CDFA20FF091D005900F1 /* Sources */,
+				A859CDFB20FF091D005900F1 /* Frameworks */,
+				A859CDFC20FF091D005900F1 /* Headers */,
+				A859CDFD20FF091D005900F1 /* Resources */,
+				A8DEF22020FF0CEC0086783A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YumeRuntime;
+			productName = YumeRuntime;
+			productReference = A859CDFF20FF091D005900F1 /* YumeRuntime.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A859CE0620FF091D005900F1 /* YumeRuntimeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A859CE1520FF091D005900F1 /* Build configuration list for PBXNativeTarget "YumeRuntimeTests" */;
+			buildPhases = (
+				A859CE0320FF091D005900F1 /* Sources */,
+				A859CE0420FF091D005900F1 /* Frameworks */,
+				A859CE0520FF091D005900F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A859CE0A20FF091D005900F1 /* PBXTargetDependency */,
+			);
+			name = YumeRuntimeTests;
+			productName = YumeRuntimeTests;
+			productReference = A859CE0720FF091D005900F1 /* YumeRuntimeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A8AA898A20FC6D7400EA28E0 /* RuntimeSwift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8AA899220FC6D7400EA28E0 /* Build configuration list for PBXNativeTarget "RuntimeSwift" */;
 			buildPhases = (
 				A8AA898720FC6D7400EA28E0 /* Sources */,
 				A8AA898820FC6D7400EA28E0 /* Frameworks */,
-				A8AA898920FC6D7400EA28E0 /* CopyFiles */,
+				A8AA898920FC6D7400EA28E0 /* Copy Files */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A8DEF22220FF0DDF0086783A /* PBXTargetDependency */,
 			);
 			name = RuntimeSwift;
 			productName = RuntimeSwift;
@@ -92,8 +337,17 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Yume;
 				TargetAttributes = {
+					A859CDFE20FF091D005900F1 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1020;
+					};
+					A859CE0620FF091D005900F1 = {
+						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1020;
+					};
 					A8AA898A20FC6D7400EA28E0 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -110,22 +364,191 @@
 			projectRoot = "";
 			targets = (
 				A8AA898A20FC6D7400EA28E0 /* RuntimeSwift */,
+				A859CDFE20FF091D005900F1 /* YumeRuntime */,
+				A859CE0620FF091D005900F1 /* YumeRuntimeTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		A859CDFD20FF091D005900F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A806611421B4F774000E5598 /* README.MD in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A859CE0520FF091D005900F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		A859CDFA20FF091D005900F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A81D4C01213D0E5400530F6A /* Property.swift in Sources */,
+				A81D4C04213D0EB100530F6A /* Misc.swift in Sources */,
+				A859CE1820FF0944005900F1 /* YumeRuntime+Property.swift in Sources */,
+				A88481D721AFB5EB0046F851 /* RawInitable.swift in Sources */,
+				A88481D521AFB56C0046F851 /* MethodDescription.swift in Sources */,
+				A859CE1E20FF0944005900F1 /* YumeRuntime+Other.swift in Sources */,
+				A81D4C06213D1CCF00530F6A /* PropertyAttribute.swift in Sources */,
+				A81D4BFF213D0E4300530F6A /* Protocol.swift in Sources */,
+				A859CE1A20FF0944005900F1 /* YumeRuntime+Protocol.swift in Sources */,
+				A859CE1F20FF0944005900F1 /* YumeRuntime+Method.swift in Sources */,
+				A859CE1920FF0944005900F1 /* YumeRuntime+Ivar.swift in Sources */,
+				A859CE1D20FF0944005900F1 /* YumeRuntime+Variable.swift in Sources */,
+				A81D4BFB213D0DFF00530F6A /* Method.swift in Sources */,
+				A859CE1620FF0944005900F1 /* YumeRuntime.swift in Sources */,
+				A88481D321AF96D10046F851 /* Misc+Pointer.swift in Sources */,
+				A859CE1B20FF0944005900F1 /* Selector.swift in Sources */,
+				A81D4BFD213D0E0B00530F6A /* Ivar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A859CE0320FF091D005900F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A859CE2120FF09AD005900F1 /* Person.swift in Sources */,
+				A806611121B4F091000E5598 /* Runtime+PropertyTests.swift in Sources */,
+				A806610D21B4D3FE000E5598 /* Runtime+IvarTests.swift in Sources */,
+				A806610F21B4DF9B000E5598 /* Runtime+ProtocolTests.swift in Sources */,
+				A88481DB21AFC8540046F851 /* Runtime+MethodTests.swift in Sources */,
+				A859CE2020FF09AA005900F1 /* RuntimeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A8AA898720FC6D7400EA28E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8AA899620FC6D9700EA28E0 /* Person.swift in Sources */,
+				A88481DD21AFCB260046F851 /* Mirror.swift in Sources */,
+				A8AA899C20FDC31400EA28E0 /* Bind.swift in Sources */,
 				A8AA898F20FC6D7400EA28E0 /* main.swift in Sources */,
+				A80FBC122179D6B1008415E1 /* Temp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A859CE0A20FF091D005900F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A859CDFE20FF091D005900F1 /* YumeRuntime */;
+			targetProxy = A859CE0920FF091D005900F1 /* PBXContainerItemProxy */;
+		};
+		A8DEF22220FF0DDF0086783A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A859CDFE20FF091D005900F1 /* YumeRuntime */;
+			targetProxy = A8DEF22120FF0DDF0086783A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A859CE1020FF091D005900F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = YumeRuntime/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yume190.YumeRuntime;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A859CE1120FF091D005900F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = YumeRuntime/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yume190.YumeRuntime;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A859CE1220FF091D005900F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = YumeRuntimeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yume190.YumeRuntimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A859CE1320FF091D005900F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = YumeRuntimeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yume190.YumeRuntimeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		A8AA899020FC6D7400EA28E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -242,24 +665,67 @@
 		A8AA899320FC6D7400EA28E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+					"@executable_path",
+				);
+				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		A8AA899420FC6D7400EA28E0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+					"@executable_path",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_FORCE_DYNAMIC_LINK_STDLIB = YES;
+				SWIFT_FORCE_STATIC_LINK_STDLIB = NO;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A859CE1420FF091D005900F1 /* Build configuration list for PBXNativeTarget "YumeRuntime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A859CE1020FF091D005900F1 /* Debug */,
+				A859CE1120FF091D005900F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A859CE1520FF091D005900F1 /* Build configuration list for PBXNativeTarget "YumeRuntimeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A859CE1220FF091D005900F1 /* Debug */,
+				A859CE1320FF091D005900F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A8AA898620FC6D7400EA28E0 /* Build configuration list for PBXProject "RuntimeSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
