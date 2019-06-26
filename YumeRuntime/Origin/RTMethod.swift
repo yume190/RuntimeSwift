@@ -8,35 +8,35 @@
 
 import Foundation
 
-extension Runtime {
-    public struct _Method: RawInitable {
-        
-        public let raw: ObjectiveC.Method
-        
-        /// Returns the name of a method.
-        public let sel: ObjectiveC.Selector
-        
-        /// Returns the implementation of a method.
-        public let imp: ObjectiveC.IMP
-        
-        public init(raw: ObjectiveC.Method) {
-            self.raw = raw
-            self.sel = method_getName(raw)
-            self.imp = method_getImplementation(raw)
-        }
-        
-        public var argumentsCount: UInt32 {
-            return method_getNumberOfArguments(raw)
-        }
-        
-        /// Returns a method description structure for a specified method.
-        public var getDescription: MethodDescription? {
-            return MethodDescription(raw: method_getDescription(self.raw).pointee)
-        }
+
+public struct RTMethod: RawInitable {
+    
+    public let raw: ObjectiveC.Method
+    
+    /// Returns the name of a method.
+    public let sel: ObjectiveC.Selector
+    
+    /// Returns the implementation of a method.
+    public let imp: ObjectiveC.IMP
+    
+    public init(raw: ObjectiveC.Method) {
+        self.raw = raw
+        self.sel = method_getName(raw)
+        self.imp = method_getImplementation(raw)
+    }
+    
+    public var argumentsCount: UInt32 {
+        return method_getNumberOfArguments(raw)
+    }
+    
+    /// Returns a method description structure for a specified method.
+    public var getDescription: RTMethodDescription? {
+        return RTMethodDescription(raw: method_getDescription(self.raw).pointee)
     }
 }
 
-extension Runtime._Method: CustomStringConvertible {
+
+extension RTMethod: CustomStringConvertible {
     public var description: String {
         //            raw : \(raw)
         //            sel : \(sel)
@@ -48,13 +48,15 @@ extension Runtime._Method: CustomStringConvertible {
         
         return """
         
-        method: \(raw), imp: \(imp), \(sel)
+        \(self.sel.name) \(self.typeEncoding ?? "")
         """
+//        method: \(raw),
+//        imp: \(imp), \(sel)
     }
 }
 
 // MARK: Type encode
-extension Runtime._Method {
+extension RTMethod {
     /// Returns a string describing a method's parameter and return types.
     public var typeEncoding: String? {
         return method_getTypeEncoding(raw)?.string
@@ -88,7 +90,7 @@ extension Runtime._Method {
 }
 
 // MARK: Change implementation
-extension Runtime._Method {
+extension RTMethod {
     /// Sets the implementation of a method.
     public func setImplementation(imp: ObjectiveC.IMP) -> ObjectiveC.IMP {
         return method_setImplementation(self.raw, imp)
@@ -100,7 +102,7 @@ extension Runtime._Method {
     }
     
     /// Exchanges the implementations of two methods.
-    public func exchangeImplementations(method: Runtime._Method) {
+    public func exchangeImplementations(method: RTMethod) {
         self.exchangeImplementations(method: method.raw)
     }
 }

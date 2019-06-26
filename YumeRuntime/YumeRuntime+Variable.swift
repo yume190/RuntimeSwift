@@ -8,17 +8,32 @@
 
 import Foundation
 
-// MARK: Property
-extension Runtime {
+
+extension Bridge where Bridge == RTIvar {
     /// Returns the Ivar for a specified instance variable of a given class.
-    public func instanceVariable(name: String) -> Runtime._Ivar? {
-        let ivar = class_getInstanceVariable(self.class, name)
-        return Runtime._Ivar(raw: ivar)
+    public func instance(name: String) -> RTIvar? {
+        let ivar = class_getInstanceVariable(self.runtime.class, name)
+        return RTIvar(raw: ivar)
     }
     
     /// Returns the Ivar for a specified class variable of a given class.
-    public func classVariable(name: String) -> Runtime._Ivar? {
+    public func `class`(name: String) -> RTIvar? {
+        let ivar = class_getClassVariable(self.runtime.class, name)
+        return RTIvar(raw: ivar)
+    }
+}
+
+// MARK: Property
+extension Runtime {
+    /// Returns the Ivar for a specified instance variable of a given class.
+    public func instanceVariable(name: String) -> RTIvar? {
+        let ivar = class_getInstanceVariable(self.class, name)
+        return RTIvar(raw: ivar)
+    }
+    
+    /// Returns the Ivar for a specified class variable of a given class.
+    public func classVariable(name: String) -> RTIvar? {
         let ivar = class_getClassVariable(self.class, name)
-        return Runtime._Ivar(raw: ivar)
+        return RTIvar(raw: ivar)
     }
 }

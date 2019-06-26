@@ -8,53 +8,52 @@
 
 import Foundation
 
-extension Runtime {
-    public struct _Protocol: RawInitable {
-        let raw: Protocol
-                
-        /// Returns a the name of a protocol.
-        public var name: String {
-            return protocol_getName(self.raw).string
-        }
-        
-        /// Creates a new protocol instance.
-        public static func allocate(name: String) -> _Protocol? {
-            return _Protocol(raw: objc_allocateProtocol(name))
-        }
-        
-        /// Registers a newly created protocol with the Objective-C runtime.
-        public func register() {
-            objc_registerProtocol(self.raw)
-        }
-        
-        /// Adds a registered protocol to another protocol that is under construction.
-        func add(`protocol`: _Protocol) {
-            return protocol_addProtocol(self.raw, `protocol`.raw)
-        }
-        
-        /// Returns an array of the protocols adopted by a protocol.
-        var copyProtocols: [Runtime._Protocol] {
-            return Misc
-                .copyList { protocol_copyProtocolList(self.raw, $0) }
-                .map { Runtime._Protocol(raw: $0) }
-        }
-        
-        /// Returns a Boolean value that indicates whether one protocol conforms to another protocol.
-        func conformsTo(`protocol`: Protocol?) -> Bool {
-            return protocol_conformsToProtocol(self.raw, `protocol`)
-        }
+public struct RTProtocol: RawInitable {
+    let raw: Protocol
+    
+    /// Returns a the name of a protocol.
+    public var name: String {
+        return protocol_getName(self.raw).string
+    }
+    
+    /// Creates a new protocol instance.
+    public static func allocate(name: String) -> RTProtocol? {
+        return RTProtocol(raw: objc_allocateProtocol(name))
+    }
+    
+    /// Registers a newly created protocol with the Objective-C runtime.
+    public func register() {
+        objc_registerProtocol(self.raw)
+    }
+    
+    /// Adds a registered protocol to another protocol that is under construction.
+    func add(`protocol`: RTProtocol) {
+        return protocol_addProtocol(self.raw, `protocol`.raw)
+    }
+    
+    /// Returns an array of the protocols adopted by a protocol.
+    var copyProtocols: [RTProtocol] {
+        return Misc
+            .copyList { protocol_copyProtocolList(self.raw, $0) }
+            .map { RTProtocol(raw: $0) }
+    }
+    
+    /// Returns a Boolean value that indicates whether one protocol conforms to another protocol.
+    func conformsTo(`protocol`: Protocol?) -> Bool {
+        return protocol_conformsToProtocol(self.raw, `protocol`)
     }
 }
 
-extension Runtime._Protocol: Equatable {
+
+extension RTProtocol: Equatable {
     //Returns a Boolean value that indicates whether two protocols are equal.
-    public static func == (lhs: Runtime._Protocol, rhs: Runtime._Protocol) -> Bool {
+    public static func == (lhs: RTProtocol, rhs: RTProtocol) -> Bool {
         return protocol_isEqual(lhs.raw,rhs.raw)
     }
 }
 
 // MARK: Description
-extension Runtime._Protocol {
+extension RTProtocol {
     /// Returns a method description structure for a specified method of a given protocol.
     func methodDescription(sel: Selector, isRequiredMethod: Bool = true, isInstanceMethod: Bool = true) -> objc_method_description {
         return protocol_getMethodDescription(self.raw, sel, isRequiredMethod, isInstanceMethod)
@@ -66,18 +65,18 @@ extension Runtime._Protocol {
     }
     
     /// Returns an array of method descriptions of methods meeting a given specification for a given protocol.
-    func copyMethodDescriptionList(isRequiredMethod: Bool = true, isInstanceMethod: Bool = true, outCount: inout UInt32) -> [Runtime.MethodDescription] {
+    func copyMethodDescriptionList(isRequiredMethod: Bool = true, isInstanceMethod: Bool = true, outCount: inout UInt32) -> [RTMethodDescription] {
         let pointer = protocol_copyMethodDescriptionList(self.raw, isRequiredMethod, isInstanceMethod, &outCount)
 
         let buffer = UnsafeBufferPointer(start: pointer, count: Int(outCount))
         return buffer
             .array
-            .map { Runtime.MethodDescription(raw: $0) }
+            .map { RTMethodDescription(raw: $0) }
     }
 }
 
 // MARK: Propery
-extension Runtime._Protocol {
+extension RTProtocol {
     /// Returns the specified property of a given protocol.
     func getProperty(name: String, isRequiredProperty: Bool = true, isInstanceProperty: Bool = true) -> objc_property_t? {
         return protocol_getProperty(self.raw, name, isRequiredProperty, isInstanceProperty)
@@ -89,9 +88,9 @@ extension Runtime._Protocol {
     }
 
     /// Returns an array of the properties declared by a protocol.
-    var properties: [Runtime._Property] {
+    var properties: [RTProperty] {
         return Misc
             .copyList{ protocol_copyPropertyList(self.raw, $0) }
-            .map { Runtime._Property(raw: $0) }
+            .map { RTProperty(raw: $0) }
     }
 }

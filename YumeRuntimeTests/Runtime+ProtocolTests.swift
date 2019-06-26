@@ -15,10 +15,10 @@ protocol SwiftProtocol {}
 @objc protocol ObjcProtocol {}
 
 class Runtime_ProtocolTests: XCTestCase {
-    let rSon = Runtime(Son2.self)
+    let rSon = Runtime(Son.self)
     
-    let swiftProtocol = Runtime<Son2>.get(protocol: "YumeRuntimeTests.SwiftProtocol")
-    let objcProtocol = Runtime<Son2>.get(protocol: "YumeRuntimeTests.ObjcProtocol")
+    let swiftProtocol = Runtime<Son>.get(protocol: "YumeRuntimeTests.SwiftProtocol")
+    let objcProtocol = Runtime<Son>.get(protocol: "YumeRuntimeTests.ObjcProtocol")
     
     func testGetProtocol() {
         XCTAssertTrue(swiftProtocol == nil)
@@ -37,7 +37,7 @@ class Runtime_ProtocolTests: XCTestCase {
     
     /// ??
     func testAllProtocol() {
-        let ps = Runtime<Son2>.allRuntimeProtocols
+        let ps = Runtime<Son>.allRuntimeProtocols
         XCTAssertEqual(ps.count, 937)
     }
 }

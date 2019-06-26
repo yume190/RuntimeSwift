@@ -8,17 +8,43 @@
 
 import Foundation
 
-extension Runtime {
+extension Bridge where Bridge == RTProperty {
     /// Returns a property with a given name of a given class
-    public func getProperty(name: String) -> _Property? {
-        return _Property(raw: class_getProperty(self.class, name))
+    public func get(name: String) -> RTProperty? {
+        return RTProperty(raw: class_getProperty(self.runtime.class, name))
     }
     
     /// Describes the properties declared by a class.
-    public var properties: [_Property] {
+    public var list: [RTProperty] {
+        return Misc
+            .copyList { class_copyPropertyList(self.runtime.class, $0) }
+            .map {RTProperty(raw: $0)}
+    }
+    
+    /// Adds a property to a class.
+    public func add(name: String, attributes: inout [objc_property_attribute_t]) -> Bool {
+        return class_addProperty(self.runtime.class, name, &attributes, UInt32(attributes.count))
+    }
+    
+    /// Replace a property of a class.
+    public func replace(name: String, attributes: inout [objc_property_attribute_t], count: UInt32) {
+        class_replaceProperty(self.runtime.class, name, &attributes, UInt32(attributes.count))
+    }
+}
+
+//////////////////////////////
+
+extension Runtime {
+    /// Returns a property with a given name of a given class
+    public func getProperty(name: String) -> RTProperty? {
+        return RTProperty(raw: class_getProperty(self.class, name))
+    }
+    
+    /// Describes the properties declared by a class.
+    public var properties: [RTProperty] {
         return Misc
             .copyList { class_copyPropertyList(self.class, $0) }
-            .map {Runtime._Property(raw: $0)}
+            .map {RTProperty(raw: $0)}
     }
     
     /// Adds a property to a class.

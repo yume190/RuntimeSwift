@@ -71,3 +71,17 @@ public func cast(imp: IMP) -> _IMP {
 //
 //func objc_storeWeak(AutoreleasingUnsafeMutablePointer<AnyObject?>, Any?) -> Any?
 //Stores a new value in a __weak variable.
+
+
+
+//func objc_allocateClassPair(AnyClass?, UnsafePointer<Int8>, Int) -> AnyClass?
+//Creates a new class and metaclass.
+//
+//func objc_disposeClassPair(AnyClass)
+//Destroys a class and its associated metaclass.
+//
+//func objc_registerClassPair(AnyClass)
+//Registers a class that was allocated using objc_allocateClassPair(_:_:_:).
+//
+//func objc_duplicateClass(AnyClass, UnsafePointer<Int8>, Int) -> AnyClass
+//Used by Foundation's Key-Value Observing.

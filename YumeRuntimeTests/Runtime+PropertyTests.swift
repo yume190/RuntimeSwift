@@ -12,7 +12,7 @@ import XCTest
 @testable import YumeRuntime
 
 class Runtime_PropertyTests: XCTestCase {
-    let rSon = Runtime(Son2.self)
+    let rSon = Runtime(Son.self)
     
     
     func testGetProperty() {
@@ -51,15 +51,15 @@ class Runtime_PropertyTests: XCTestCase {
 
 extension Runtime {
     /// Returns a property with a given name of a given class
-    public func getProperty(name: String) -> _Property? {
-        return _Property(raw: class_getProperty(self.class, name))
+    public func getProperty(name: String) -> RTProperty? {
+        return RTProperty(raw: class_getProperty(self.class, name))
     }
     
     /// Describes the properties declared by a class.
-    public var properties: [_Property] {
+    public var properties: [RTProperty] {
         return Misc
             .copyList { class_copyPropertyList(self.class, $0) }
-            .map {Runtime._Property(raw: $0)}
+            .map {RTProperty(raw: $0)}
     }
     
     /// Adds a property to a class.

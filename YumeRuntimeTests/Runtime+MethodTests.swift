@@ -12,118 +12,94 @@ import XCTest
 @testable import YumeRuntime
 
 class Runtime_MethodTests: XCTestCase {
-    let rFather = Runtime(Father.self)
-    let son = Son2()
-    let rSon = Runtime(Son2.self)
     
-    let sel1 = #selector(Son2.fn1)
-    let sel2 = #selector(Son2.fn2(i:))
-    
-    let rSupport = Runtime(MutateSupport.self)
-    let target = MutateTarget()
-    lazy var rTarget = Runtime(self.target)
-    let selTypeEncode = "q24@0:8q16"
+    let son_fn1 = #selector(Son.fn1)
+    let son_fn2 = #selector(Son.fn2(i:))
     
     func testImp1() {
-        let fn1Imp = rSon.imp(selector: sel1)!
+        let fn1Imp = son.method.imp(selector: son_fn1)!
         let fn1: @convention(c) (AnyObject, Selector) -> Int = fn1Imp.cast()
-        XCTAssertEqual(fn1(son, sel1), 1)
+        XCTAssertEqual(fn1(Son(), son_fn1), 1)
     }
     
     func testImp2() {
-        let fn2Imp = rSon.imp(selector: sel2)!
+        let fn2Imp = son.method.imp(selector: son_fn2)!
         let fn2: @convention(c) (AnyObject, Selector, Int) -> Int = fn2Imp.cast()
-        XCTAssertEqual(fn2(son, sel2, 2), 2)
+        XCTAssertEqual(fn2(Son(), son_fn2, 2), 2)
     }
     
     func testImpStret1() {
-        let fn1Imp = rSon.impStret(selector: sel1)!
+        let fn1Imp = son.method.impStret(selector: son_fn1)!
         let fn1: @convention(c) (AnyObject, Selector) -> Int = fn1Imp.cast()
-        XCTAssertEqual(fn1(son, sel1), 1)
+        XCTAssertEqual(fn1(Son(), son_fn1), 1)
     }
-    
+
     func testImpStret2() {
-        let fn2Imp = rSon.impStret(selector: sel2)!
+        let fn2Imp = son.method.impStret(selector: son_fn2)!
         let fn2: @convention(c) (AnyObject, Selector, Int) -> Int = fn2Imp.cast()
-        XCTAssertEqual(fn2(son, sel2, 2), 2)
+        XCTAssertEqual(fn2(Son(), son_fn2, 2), 2)
     }
-    
+
     func testIsRespondsTo() {
-        XCTAssertTrue(rSon.isRespondsTo(selector: sel1))
-        XCTAssertTrue(rSon.isRespondsTo(selector: sel2))
+        XCTAssertTrue(son.method.isRespondsTo(selector: son_fn1))
+        XCTAssertTrue(son.method.isRespondsTo(selector: son_fn2))
     }
     
     func testMethods() {
-        // sn1          "q16@0:8"
-        // sn2WithI     "q24@0:8q16"
-        // init
-        // .cxx_destruct
-        XCTAssertEqual(rFather.methods.count, 4)
-        XCTAssertEqual(rSon.methods.count, 4)
-    }
-    
-    /// support mn3(+30) add to target
-    func testAddMethods() {
-        let sel = #selector(MutateSupport.mn3(a:))
-        let method = rSupport.instanceMethod(name: sel)!
-        let addResult = rTarget.addMethod(name: sel, imp: method.imp, types: selTypeEncode)
-        XCTAssertTrue(addResult)
-        
-        let imp = rTarget.imp(selector: sel)!
-        let mn3: @convention(c) (AnyObject, Selector, Int) -> Int = imp.cast()
-        XCTAssertEqual(mn3(MutateTarget(), sel, 0), 30)
-    }
-
-    // MARK: Need dynamic func
-    /// tartet mn1 置換成 mn2(+200)
-    func testReplaceMethods() {
-        let sel1 = #selector(MutateTarget.mn1(a:))
-        let sel2 = #selector(MutateTarget.mn2(a:))
-        let method = rTarget.instanceMethod(name: sel2)!
-        let replaceResult = rTarget.replaceMethod(name: sel1, imp: method.imp, types: selTypeEncode)
-        XCTAssertTrue(replaceResult != nil)
-        XCTAssertEqual(target.mn1(a: 0), 200)
-        XCTAssertEqual(target.mn2(a: 0), 200)
+        // sn1 q16@0:8
+        // sn2WithI: q24@0:8q16
+        // init @16@0:8
+        // .cxx_destruct v16@0:8
+        XCTAssertEqual(father.methods.count, 4)
+        // fn2WithI: q24@0:8q16
+        // fn1 q16@0:8
+        // init @16@0:8
+        // .cxx_destruct v16@0:8
+        // age q16@0:8
+        // setAge: v24@0:8q16
+        XCTAssertEqual(son.methods.count, 6)
     }
     
     func testInstanceMethod() {
-        let method = rTarget.instanceMethod(name: #selector(MutateTarget.mn1(a:)))
-        XCTAssertTrue(method != nil)
+        let imp = son.method.instance(name: son_fn1)?.imp
+        let fn: @convention(c) (AnyObject, Selector) -> Int = imp!.cast()
+        XCTAssertEqual(fn(Son(), son_fn1), 1)
     }
     
     func testClassMethod() {
-        let cMethod = rTarget.classMethod(name: #selector(MutateTarget.cn1))
-        XCTAssertTrue(cMethod != nil)
+        let impFn4 = son.method.class(name: #selector(Son.fn4))?.imp
+        let fn4: @convention(c) (AnyObject, Selector) -> Int = impFn4!.cast()
+        XCTAssertEqual(fn4(Son(), #selector(Son.fn4)), 11)
         
-        let sMethod = rTarget.classMethod(name: #selector(MutateTarget.sn1))
-        XCTAssertTrue(sMethod != nil)
+        let impFn5 = son.method.class(name: #selector(Son.fn5))?.imp
+        let fn5: @convention(c) (AnyObject, Selector) -> Int = impFn5!.cast()
+        XCTAssertEqual(fn5(Son(), #selector(Son.fn5)), 12)
     }
 }
 
-@objc class MutateSupport: NSObject {
-    @objc func mn1(a: Int) -> Int {
-        return a + 10
-    }
-    
-    @objc func mn2(a: Int) -> Int {
-        return a + 20
-    }
-    
-    @objc func mn3(a: Int) -> Int {
-        return a + 30
-    }
-}
+// MARK: Type Encode
+extension Runtime_MethodTests {
+    /// q24@0:8q16
+    /// @objc func fn2(i: Int) -> Int { return i }
+    /// q long long
+    /// @ id
+    /// : SEL
+    func testEncode() {
+        let method = son.method.instance(name: son_fn2)
+        
+        XCTAssertEqual(method?.argumentsCount, 3)
+        
+        XCTAssertEqual(method?.typeEncoding, "q24@0:8q16")
+        XCTAssertEqual(method?.copyReturnType, "q")
+        XCTAssertEqual(method?.getReturnType, "q")
+        XCTAssertEqual(method?.copyArgumentType(index: 0), "@")
+        XCTAssertEqual(method?.getArgumentType(index: 0), "@")
+        
+        XCTAssertEqual(method?.copyArgumentType(index: 1), ":")
+        XCTAssertEqual(method?.getArgumentType(index: 1), ":")
+        
+        XCTAssertEqual(method?.copyArgumentType(index: 2), "q")
+        XCTAssertEqual(method?.getArgumentType(index: 2), "q")
 
-
-@objc class MutateTarget: NSObject {
-    @objc class func cn1() {}
-    @objc static func sn1() {}
-    
-    @objc dynamic func mn1(a: Int) -> Int {
-        return a + 100
-    }
-    
-    @objc dynamic func mn2(a: Int) -> Int {
-        return a + 200
     }
 }

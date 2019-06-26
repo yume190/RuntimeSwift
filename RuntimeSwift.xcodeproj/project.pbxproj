@@ -12,12 +12,11 @@
 		A806611121B4F091000E5598 /* Runtime+PropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806611021B4F091000E5598 /* Runtime+PropertyTests.swift */; };
 		A806611421B4F774000E5598 /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = A806611321B4F774000E5598 /* README.MD */; };
 		A80FBC122179D6B1008415E1 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80FBC112179D6B1008415E1 /* Temp.swift */; };
-		A81D4BFB213D0DFF00530F6A /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4BFA213D0DFF00530F6A /* Method.swift */; };
-		A81D4BFD213D0E0B00530F6A /* Ivar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4BFC213D0E0B00530F6A /* Ivar.swift */; };
-		A81D4BFF213D0E4300530F6A /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4BFE213D0E4300530F6A /* Protocol.swift */; };
-		A81D4C01213D0E5400530F6A /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4C00213D0E5400530F6A /* Property.swift */; };
+		A81D4BFB213D0DFF00530F6A /* RTMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4BFA213D0DFF00530F6A /* RTMethod.swift */; };
+		A81D4BFD213D0E0B00530F6A /* RTIvar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4BFC213D0E0B00530F6A /* RTIvar.swift */; };
+		A81D4BFF213D0E4300530F6A /* RTProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4BFE213D0E4300530F6A /* RTProtocol.swift */; };
+		A81D4C01213D0E5400530F6A /* RTProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4C00213D0E5400530F6A /* RTProperty.swift */; };
 		A81D4C04213D0EB100530F6A /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4C03213D0EB100530F6A /* Misc.swift */; };
-		A81D4C06213D1CCF00530F6A /* PropertyAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D4C05213D1CCF00530F6A /* PropertyAttribute.swift */; };
 		A859CE0820FF091D005900F1 /* YumeRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A859CDFF20FF091D005900F1 /* YumeRuntime.framework */; };
 		A859CE0F20FF091D005900F1 /* YumeRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = A859CE0120FF091D005900F1 /* YumeRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A859CE1620FF0944005900F1 /* YumeRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A855829D20FDD3120033777C /* YumeRuntime.swift */; };
@@ -31,13 +30,16 @@
 		A859CE2020FF09AA005900F1 /* RuntimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A859CDF220FEF037005900F1 /* RuntimeTests.swift */; };
 		A859CE2120FF09AD005900F1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A859CDF820FEF133005900F1 /* Person.swift */; };
 		A88481D321AF96D10046F851 /* Misc+Pointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88481D221AF96D10046F851 /* Misc+Pointer.swift */; };
-		A88481D521AFB56C0046F851 /* MethodDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88481D421AFB56C0046F851 /* MethodDescription.swift */; };
+		A88481D521AFB56C0046F851 /* RTMethodDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88481D421AFB56C0046F851 /* RTMethodDescription.swift */; };
 		A88481D721AFB5EB0046F851 /* RawInitable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88481D621AFB5EB0046F851 /* RawInitable.swift */; };
 		A88481DB21AFC8540046F851 /* Runtime+MethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88481DA21AFC8540046F851 /* Runtime+MethodTests.swift */; };
 		A88481DD21AFCB260046F851 /* Mirror.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88481DC21AFCB260046F851 /* Mirror.swift */; };
 		A8AA898F20FC6D7400EA28E0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AA898E20FC6D7400EA28E0 /* main.swift */; };
 		A8AA899620FC6D9700EA28E0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AA899520FC6D9700EA28E0 /* Person.swift */; };
 		A8AA899C20FDC31400EA28E0 /* Bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AA899B20FDC31400EA28E0 /* Bind.swift */; };
+		A8B23E7B228400F400333CF6 /* RTPropertyAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B23E7A228400F400333CF6 /* RTPropertyAttribute.swift */; };
+		A8B23E7D22840BD500333CF6 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B23E7C22840BD500333CF6 /* Bridge.swift */; };
+		A8B23E80228434D200333CF6 /* Runtime+MethodSwizzleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B23E7F228434D200333CF6 /* Runtime+MethodSwizzleTests.swift */; };
 		A8DEF22320FF0DE30086783A /* YumeRuntime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A859CDFF20FF091D005900F1 /* YumeRuntime.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,12 +88,11 @@
 		A806611021B4F091000E5598 /* Runtime+PropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Runtime+PropertyTests.swift"; sourceTree = "<group>"; };
 		A806611321B4F774000E5598 /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 		A80FBC112179D6B1008415E1 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
-		A81D4BFA213D0DFF00530F6A /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
-		A81D4BFC213D0E0B00530F6A /* Ivar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ivar.swift; sourceTree = "<group>"; };
-		A81D4BFE213D0E4300530F6A /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
-		A81D4C00213D0E5400530F6A /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		A81D4BFA213D0DFF00530F6A /* RTMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTMethod.swift; sourceTree = "<group>"; };
+		A81D4BFC213D0E0B00530F6A /* RTIvar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTIvar.swift; sourceTree = "<group>"; };
+		A81D4BFE213D0E4300530F6A /* RTProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTProtocol.swift; sourceTree = "<group>"; };
+		A81D4C00213D0E5400530F6A /* RTProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTProperty.swift; sourceTree = "<group>"; };
 		A81D4C03213D0EB100530F6A /* Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
-		A81D4C05213D1CCF00530F6A /* PropertyAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyAttribute.swift; sourceTree = "<group>"; };
 		A855829D20FDD3120033777C /* YumeRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YumeRuntime.swift; sourceTree = "<group>"; };
 		A859CDCE20FEDB6A005900F1 /* YumeRuntime+Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YumeRuntime+Method.swift"; sourceTree = "<group>"; };
 		A859CDD020FEDB88005900F1 /* YumeRuntime+Ivar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YumeRuntime+Ivar.swift"; sourceTree = "<group>"; };
@@ -108,7 +109,7 @@
 		A859CE0720FF091D005900F1 /* YumeRuntimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YumeRuntimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A859CE0E20FF091D005900F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A88481D221AF96D10046F851 /* Misc+Pointer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Misc+Pointer.swift"; sourceTree = "<group>"; };
-		A88481D421AFB56C0046F851 /* MethodDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodDescription.swift; sourceTree = "<group>"; };
+		A88481D421AFB56C0046F851 /* RTMethodDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTMethodDescription.swift; sourceTree = "<group>"; };
 		A88481D621AFB5EB0046F851 /* RawInitable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawInitable.swift; sourceTree = "<group>"; };
 		A88481DA21AFC8540046F851 /* Runtime+MethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Runtime+MethodTests.swift"; sourceTree = "<group>"; };
 		A88481DC21AFCB260046F851 /* Mirror.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mirror.swift; sourceTree = "<group>"; };
@@ -116,6 +117,9 @@
 		A8AA898E20FC6D7400EA28E0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A8AA899520FC6D9700EA28E0 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		A8AA899B20FDC31400EA28E0 /* Bind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bind.swift; sourceTree = "<group>"; };
+		A8B23E7A228400F400333CF6 /* RTPropertyAttribute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTPropertyAttribute.swift; sourceTree = "<group>"; };
+		A8B23E7C22840BD500333CF6 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
+		A8B23E7F228434D200333CF6 /* Runtime+MethodSwizzleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Runtime+MethodSwizzleTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,18 +157,18 @@
 			path = TypeEncoding;
 			sourceTree = "<group>";
 		};
-		A81D4BF7213D0D9F00530F6A /* Classes */ = {
+		A81D4BF7213D0D9F00530F6A /* Origin */ = {
 			isa = PBXGroup;
 			children = (
-				A88481D921AFBA350046F851 /* Ex */,
-				A81D4BFA213D0DFF00530F6A /* Method.swift */,
-				A81D4BFC213D0E0B00530F6A /* Ivar.swift */,
-				A81D4BFE213D0E4300530F6A /* Protocol.swift */,
-				A81D4C00213D0E5400530F6A /* Property.swift */,
-				A81D4C05213D1CCF00530F6A /* PropertyAttribute.swift */,
-				A88481D421AFB56C0046F851 /* MethodDescription.swift */,
+				A859CDD820FEDBC9005900F1 /* Selector.swift */,
+				A81D4BFA213D0DFF00530F6A /* RTMethod.swift */,
+				A81D4BFC213D0E0B00530F6A /* RTIvar.swift */,
+				A81D4BFE213D0E4300530F6A /* RTProtocol.swift */,
+				A81D4C00213D0E5400530F6A /* RTProperty.swift */,
+				A8B23E7A228400F400333CF6 /* RTPropertyAttribute.swift */,
+				A88481D421AFB56C0046F851 /* RTMethodDescription.swift */,
 			);
-			path = Classes;
+			path = Origin;
 			sourceTree = "<group>";
 		};
 		A81D4C02213D0EA800530F6A /* Misc */ = {
@@ -182,8 +186,9 @@
 			children = (
 				A806611221B4F75D000E5598 /* TypeEncoding */,
 				A81D4C02213D0EA800530F6A /* Misc */,
-				A81D4BF7213D0D9F00530F6A /* Classes */,
+				A81D4BF7213D0D9F00530F6A /* Origin */,
 				A855829D20FDD3120033777C /* YumeRuntime.swift */,
+				A8B23E7C22840BD500333CF6 /* Bridge.swift */,
 				A859CDCE20FEDB6A005900F1 /* YumeRuntime+Method.swift */,
 				A859CDD020FEDB88005900F1 /* YumeRuntime+Ivar.swift */,
 				A859CDD220FEDB90005900F1 /* YumeRuntime+Protocol.swift */,
@@ -199,23 +204,16 @@
 		A859CE0B20FF091D005900F1 /* YumeRuntimeTests */ = {
 			isa = PBXGroup;
 			children = (
+				A8B23E7E22841E8900333CF6 /* Constant */,
 				A859CDF220FEF037005900F1 /* RuntimeTests.swift */,
-				A88481DA21AFC8540046F851 /* Runtime+MethodTests.swift */,
 				A806610C21B4D3FE000E5598 /* Runtime+IvarTests.swift */,
+				A88481DA21AFC8540046F851 /* Runtime+MethodTests.swift */,
+				A8B23E7F228434D200333CF6 /* Runtime+MethodSwizzleTests.swift */,
 				A806610E21B4DF9B000E5598 /* Runtime+ProtocolTests.swift */,
 				A806611021B4F091000E5598 /* Runtime+PropertyTests.swift */,
-				A859CDF820FEF133005900F1 /* Person.swift */,
 				A859CE0E20FF091D005900F1 /* Info.plist */,
 			);
 			path = YumeRuntimeTests;
-			sourceTree = "<group>";
-		};
-		A88481D921AFBA350046F851 /* Ex */ = {
-			isa = PBXGroup;
-			children = (
-				A859CDD820FEDBC9005900F1 /* Selector.swift */,
-			);
-			path = Ex;
 			sourceTree = "<group>";
 		};
 		A8AA898220FC6D7400EA28E0 = {
@@ -249,6 +247,14 @@
 				A88481DC21AFCB260046F851 /* Mirror.swift */,
 			);
 			path = RuntimeSwift;
+			sourceTree = "<group>";
+		};
+		A8B23E7E22841E8900333CF6 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				A859CDF820FEF133005900F1 /* Person.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		A8DEF21620FF0ADE0086783A /* Frameworks */ = {
@@ -393,23 +399,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A81D4C01213D0E5400530F6A /* Property.swift in Sources */,
+				A81D4C01213D0E5400530F6A /* RTProperty.swift in Sources */,
 				A81D4C04213D0EB100530F6A /* Misc.swift in Sources */,
 				A859CE1820FF0944005900F1 /* YumeRuntime+Property.swift in Sources */,
 				A88481D721AFB5EB0046F851 /* RawInitable.swift in Sources */,
-				A88481D521AFB56C0046F851 /* MethodDescription.swift in Sources */,
+				A88481D521AFB56C0046F851 /* RTMethodDescription.swift in Sources */,
+				A8B23E7D22840BD500333CF6 /* Bridge.swift in Sources */,
+				A8B23E7B228400F400333CF6 /* RTPropertyAttribute.swift in Sources */,
 				A859CE1E20FF0944005900F1 /* YumeRuntime+Other.swift in Sources */,
-				A81D4C06213D1CCF00530F6A /* PropertyAttribute.swift in Sources */,
-				A81D4BFF213D0E4300530F6A /* Protocol.swift in Sources */,
+				A81D4BFF213D0E4300530F6A /* RTProtocol.swift in Sources */,
 				A859CE1A20FF0944005900F1 /* YumeRuntime+Protocol.swift in Sources */,
 				A859CE1F20FF0944005900F1 /* YumeRuntime+Method.swift in Sources */,
 				A859CE1920FF0944005900F1 /* YumeRuntime+Ivar.swift in Sources */,
 				A859CE1D20FF0944005900F1 /* YumeRuntime+Variable.swift in Sources */,
-				A81D4BFB213D0DFF00530F6A /* Method.swift in Sources */,
+				A81D4BFB213D0DFF00530F6A /* RTMethod.swift in Sources */,
 				A859CE1620FF0944005900F1 /* YumeRuntime.swift in Sources */,
 				A88481D321AF96D10046F851 /* Misc+Pointer.swift in Sources */,
 				A859CE1B20FF0944005900F1 /* Selector.swift in Sources */,
-				A81D4BFD213D0E0B00530F6A /* Ivar.swift in Sources */,
+				A81D4BFD213D0E0B00530F6A /* RTIvar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A859CE2120FF09AD005900F1 /* Person.swift in Sources */,
+				A8B23E80228434D200333CF6 /* Runtime+MethodSwizzleTests.swift in Sources */,
 				A806611121B4F091000E5598 /* Runtime+PropertyTests.swift in Sources */,
 				A806610D21B4D3FE000E5598 /* Runtime+IvarTests.swift in Sources */,
 				A806610F21B4DF9B000E5598 /* Runtime+ProtocolTests.swift in Sources */,
